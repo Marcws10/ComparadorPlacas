@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Placas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Comparador de Placas</h1>
+
+    <div class="container">
+        <div class="section">
+            <h2>Frota Atualizada</h2>
+            <div class="input-container">
+                <textarea id="frotaAtualizada" placeholder="Insira as placas da frota atualizada"
+                    oninput="formatarEContarPlacas(this, 'frotaAtualizadaCount', 'frotaAtualizadaCountValue')"></textarea>
+                <button class="clear-button" onclick="limparTextarea('frotaAtualizada')">Limpar</button>
+            </div>
+            <div id="frotaAtualizadaCount">0 placas informadas</div>
+        </div>
+
+        <div class="section">
+            <h2>Frota Cadastrada</h2>
+            <div class="input-container">
+                <textarea id="frotaCadastrada" placeholder="Insira as placas da frota cadastrada"
+                    oninput="formatarEContarPlacas(this, 'frotaCadastradaCount', 'frotaCadastradaCountValue')"></textarea>
+                <button class="clear-button" onclick="limparTextarea('frotaCadastrada')">Limpar</button>
+            </div>
+            <div id="frotaCadastradaCount">0 placas informadas</div>
+        </div>
+    </div>
+
+    <button class="btnComparar" onclick="compararPlacas()">Comparar Placas</button>
+
+    <div class="container">
+        <div class="result section">
+            <h2>Placas a cadastrar</h2>
+            <div id="frotaAtual">
+                <span id="frotaAtualCount">0 placas informadas</span>
+            </div>
+        </div>
+
+        <div class="result section">
+            <h2>Placas a ser desativadas</h2>
+            <div id="frotaCadastradaResultado">
+                <span id="frotaCadastradaCount">0 placas informadas</span>
+            </div>
+        </div>
+
+        <div class="result section">
+            <h2>Placas já cadastradas</h2>
+            <div id="frotaIgual">
+                <span id="frotaIgualCount">0 placas informadas</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
